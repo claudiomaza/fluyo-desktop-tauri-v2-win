@@ -1,0 +1,12 @@
+{
+  "name": "fluyo-desktop",
+  "version": "1.1.0",
+  "description": "Fluyo Desktop by cm2labs - Tauri v2",
+  "main": "index.js",
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
