@@ -1,0 +1,1 @@
+# fluyo-desktop-tauri-v2-win
