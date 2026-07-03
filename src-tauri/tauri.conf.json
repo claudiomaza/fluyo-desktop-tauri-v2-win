@@ -1,7 +1,7 @@
 {
-  "productName": "fluyo-cm2labs",
-  "version": "1.2.1",
-  "identifier": "com.cm2labs.fluyo",
+  "productName": "cm2labs-app",
+  "version": "1.0.0",
+  "identifier": "com.cm2labs.app",
   "build": {
     "frontendDist": "../ui",
     "devUrl": "http://localhost:1420",
@@ -11,32 +11,48 @@
     "windows": [
       {
         "label": "main",
-        "title": "fluyo-cm2labs",
+        "title": "cm2labs App",
         "width": 1024,
         "height": 768,
-        "url": "index.html"
+        "url": "index.html",
+        "resizable": true,
+        "fullscreen": false
       }
     ],
     "security": {
-      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:/ blob:; connect-src 'self' https: tauri: ipc: blob:; worker-src 'self' blob:;"
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; connect-src 'self' https: tauri: ipc: blob:; worker-src 'self' blob:;"
     }
   },
   "bundle": {
     "active": true,
     "targets": "all",
     "icon": [
-      "icons/icon.ico"
+      "icons/icon.ico",
+      "icons/icon.png",
+      "icons/icon.icns"
     ],
     "windows": {
       "nsis": {
         "installMode": "currentUser",
         "installerIcon": "icons/icon.ico",
-        "languages": [
-          "Spanish",
-          "English"
-        ],
+        "languages": ["Spanish", "English"],
         "displayLanguageSelector": true
       }
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    },
+    "macOS": {
+      "minimumSystemVersion": "11.0"
+    },
+    "android": {
+      "minSdkVersion": 23,
+      "targetSdkVersion": 34
+    },
+    "ios": {
+      "minimumSystemVersion": "15.0"
     }
   }
 }
